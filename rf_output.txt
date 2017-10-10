@@ -1,0 +1,48 @@
+
+Call:
+ randomForest(x = traindata[, predictor_cols], y = traindata[,      response_col], ntree = n_trees, mtry = mtry, strata = traindata[,      response_col], sampsize = c(sampsize, sampsize), importance = T,      do.trace = print_interval, keep.forest = T, keep.inbag = T) 
+               Type of random forest: classification
+                     Number of trees: 5000
+No. of variables tried at each split: 38
+
+        OOB estimate of  error rate: 6.61%
+Confusion matrix:
+             alternative conventional class.error
+alternative         1454          265  0.15415939
+conventional         360         7377  0.04652966
+Confusion Matrix and Statistics
+
+              Reference
+Prediction     alternative conventional
+  alternative          935          142
+  conventional         212         5016
+                                          
+               Accuracy : 0.9439          
+                 95% CI : (0.9379, 0.9494)
+    No Information Rate : 0.8181          
+    P-Value [Acc > NIR] : < 2.2e-16       
+                                          
+                  Kappa : 0.8068          
+ Mcnemar's Test P-Value : 0.0002451       
+                                          
+            Sensitivity : 0.8152          
+            Specificity : 0.9725          
+         Pos Pred Value : 0.8682          
+         Neg Pred Value : 0.9594          
+             Prevalence : 0.1819          
+         Detection Rate : 0.1483          
+   Detection Prevalence : 0.1708          
+      Balanced Accuracy : 0.8938          
+                                          
+       'Positive' Class : alternative     
+                                          
+                sensitivity specificity       inform        mark         mcc         f1       auc
+rf_oob         0.8458406050   0.9534703 0.7993109423 0.766866764 0.782920811 0.82309652 0.8996555
+rf             0.8648648649   0.9528887 0.8177535814 0.772666874 0.794890624 0.83291352 0.9088768
+random_50-50   0.5178727114   0.5046530 0.0225256777 0.013409512 0.017379826 0.27653631 0.5112628
+random_skew    0.1918047079   0.8109732 0.0027779534 0.002691416 0.002734343 0.18787361 0.5013890
+uniform        0.0000000000   1.0000000 0.0000000000         NaN         NaN        NaN 0.5000000
+almost_uniform 0.0008718396   1.0000000 0.0008718396 0.818210660 0.026708584 0.00174216 0.5004359
+             sensitivity specificity    inform      mark       mcc        f1
+rf             0.8648649   0.9528887 0.8177536 0.7726669 0.7948906 0.8329135
+rf_optimized   0.8151700   0.9724699 0.7876400 0.8276014 0.8073735 0.8408273
